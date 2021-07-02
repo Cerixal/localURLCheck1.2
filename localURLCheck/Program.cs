@@ -9,6 +9,7 @@ namespace localURLCheck
 
     class Program
     {
+        //program that checks a website to see if the returned IP address is local or not
         static void Main(string[] args)
         {
             Stopwatch stopWatch = new();
@@ -32,6 +33,7 @@ namespace localURLCheck
 
     class Ollie
     {
+        // my method takes all of the html on the website and checks to see if it contains the local IP address
         public static void Contain()
         {
             HtmlAgilityPack.HtmlWeb website = new();
@@ -49,6 +51,7 @@ namespace localURLCheck
 
     class Steve
     {
+        //test 
         public static void Array()
         {
             HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create("https://portland-fuel.co.uk/returnipaddress.php?requestip=$2y$10$IxSXcZswXCFeN7Y0tvjYmuweTvUwfBqqnkuFy.xrri1hBdeYF2C96");
