@@ -9,14 +9,15 @@ namespace localURLCheck
 
     class Program
     {
-        //program that checks a website to see if the returned IP address is local or not
         static void Main(string[] args)
         {
+            // adds a stopwatch to time program for efficiency
             Stopwatch stopWatch = new();
             stopWatch.Start();
-
+            // repeats each method 1000 times while timing it to see which one perfoms best
             for (int i = 0; i < 1000; i++)
             {
+                // uses classes to keep code cleaner
                 Ollie.Contain();
                 Steve.Array();
             }
