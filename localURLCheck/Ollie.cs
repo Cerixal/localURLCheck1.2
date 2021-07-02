@@ -13,9 +13,11 @@ namespace localURLCheck
         {
             HtmlAgilityPack.HtmlWeb website = new();
             HtmlAgilityPack.HtmlDocument document = website.Load("https://portland-fuel.co.uk/returnipaddress.php?requestip=$2y$10$IxSXcZswXCFeN7Y0tvjYmuweTvUwfBqqnkuFy.xrri1hBdeYF2C96");
+            // takes all of the HTML and turns it into a list
             var dataList = document.DocumentNode.SelectNodes("//div").ToList();
             string ip = Convert.ToString(dataList);
             bool check = false;
+            // checks all of the content pulled for the ip address.
             if (ip.Contains("81.143.215.110") == true)
             {
                 check = true;
